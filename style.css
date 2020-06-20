@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #333;
+}
+
+.clock__container {
+  font-size: 2em;
+  text-align: center;
+  margin: 100px auto 0;
+  color: #fff;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.clock__time {
+  background-color: #b71c1c;
+  border-radius: .5rem;
+  display: inline-block;
+  line-height: 1;
+  padding: 1.5rem 2rem;
+}
+
+.analog-clock__container {
+  text-align: center;
+}
+
+.analog-clock {
+  background-color: #fff;
+  border: 10px solid #000;
+  border-radius: 50%;
+  box-shadow: inset 2px 4px 16px rgba(0,0,0,0.75), 20px 20px 30px rgba(0,0,0,.4), 40px 40px 60px rgba(0,0,0,.4);
+  font-family: 'Roboto Mono', monospace;
+  font-size: 4vmin;
+  margin: 100px auto 0;
+  position: relative;
+  width: 50vmin;
+  height: 50vmin;
+}
+
+.analog-clock::before {
+  content: '';
+  border: 6px solid #fff;
+  border-radius: 50%;
+  width: 98%;
+  height: 98%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.analog-clock__number {
+  position: absolute;
+  line-height: 1;
+  letter-spacing: -2px;
+  transform-origin: center;
+}
+
+.analog-clock__number:nth-child(1) {
+  transform: translate(10vmin, 5vmin);
+}
+
+.analog-clock__number:nth-child(2) {
+  transform: translate(17vmin, 12vmin);
+}
+
+.analog-clock__number:nth-child(3) {
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+}
+
+.analog-clock__number:nth-child(4) {
+  transform: translate(16vmin, 32vmin);
+}
+
+.analog-clock__number:nth-child(5) {
+  transform: translate(10vmin, 39vmin);
+}
+
+.analog-clock__number:nth-child(6) {
+  bottom: 1rem;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.analog-clock__number:nth-child(7) {
+  transform: translate(-12vmin, 39vmin);
+}
+
+.analog-clock__number:nth-child(8) {
+  transform: translate(-19vmin, 32vmin);
+}
+
+.analog-clock__number:nth-child(9) {
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+}
+
+.analog-clock__number:nth-child(10) {
+  transform: translate(-20vmin, 12vmin);
+}
+
+.analog-clock__number:nth-child(11) {
+  transform: translate(-12vmin, 5vmin);
+}
+
+.analog-clock__number:nth-child(12) {
+  top: 1rem;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.analog-clock__hand {
+  box-shadow: -10px 10px 10px rgba(0,0,0,.4);
+  position: absolute;
+  background-color: #000;
+  transform-origin: 50% 100%;
+}
+
+.analog-clock__hand--hour {
+  border-top-left-radius: 25%;
+  border-top-right-radius: 25%;
+  width: 1.25vmin;
+  height: 15vmin;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%) rotate(0);
+}
+
+
+.analog-clock__hand--minute {
+  border-top-left-radius: 40%;
+  border-top-right-radius: 40%;
+  width: 1vmin;
+  height: 20vmin;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%) rotate(0);
+}
+
+.analog-clock__hand--second {
+  background-color: red;
+  width: .35vmin;
+  height: 18vmin;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%) rotate(0);
+}
+
+.analog-clock__hand--second::before {
+  content: "";
+  background-color: #000;
+  border-radius: 50%;
+  width: 3vmin;
+  height: 3vmin;
+  position: absolute;
+  transform: translate(-50%, 16.5vmin);
+}
