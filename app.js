@@ -18,12 +18,6 @@ const updateAnalogClock = () => {
   hourHand.style.transform = transformStyle(hoursPosition)
   minuteHand.style.transform = transformStyle(minutesPosition)
   secondHand.style.transform = transformStyle(secondsPosition)
-
-  // if (seconds === 0 || minutes === 0 || hours === 0) {
-  //   secondHand.style.transition = 'none'
-  // } else {
-  //   secondHand.style.transition = 'all .3s ease-in-out'
-  // }
 }
 
 setInterval(updateAnalogClock, 1000)
