@@ -9,18 +9,18 @@ const updateAnalogClock = () => {
   const minutes = present.getMinutes()
   const seconds = present.getSeconds()
 
-  const hoursPosition = hours * 360 / 12 + ((minutes * 360 / 60) / 12)
-  const minutesPosition = minutes * 360 / 60 + (seconds * 360 / 60) / 60
-  const secondsPosition = seconds * 360 / 60
+  const hoursPosition = hours * 360 / 12 + ((minutes * 360 / 60) / 12) + 180
+  const minutesPosition = minutes * 360 / 60 + (seconds * 360 / 60) / 60 + 180
+  const secondsPosition = seconds * 360 / 60 + 180
 
-  const transformStyle = (number) => `translate(-50%, -100%) rotate(${number}deg)`
+  const transformStyle = (number) => `rotate(${number}deg)`
 
   hourHand.style.transform = transformStyle(hoursPosition)
   minuteHand.style.transform = transformStyle(minutesPosition)
   secondHand.style.transform = transformStyle(secondsPosition)
 }
 
-setInterval(updateAnalogClock, 1000)
+updateAnalogClock()
 
 const updateClock = () => {
   const present = new Date()
