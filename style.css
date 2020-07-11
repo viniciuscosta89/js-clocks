@@ -147,7 +147,7 @@ body {
   position: absolute;
   background-color: #000;
   margin: 50% 49%;
-  transform-origin: 30% top;
+  transform-origin: left top;
 }
 
 .analog-clock__hand--hour::after {
